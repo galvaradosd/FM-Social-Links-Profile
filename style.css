@@ -1,0 +1,277 @@
+/* =============================================
+   FONT FACE
+   ============================================= */
+
+@font-face {
+	font-family: "Inter";
+	src: url("./assets/fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* =============================================
+   CSS RESET
+   ============================================= */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	min-block-size: 100vh;
+	line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-inline-size: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* =============================================
+   CSS CUSTOM PROPERTIES (Design System)
+   ============================================= */
+
+:root {
+	/* Colors - Grey */
+	--color-grey-900: hsl(0, 0%, 8%);
+	--color-grey-800: hsl(0, 0%, 12%);
+	--color-grey-700: hsl(0, 0%, 20%);
+
+	/* Colors - Green */
+	--color-green: hsl(75, 94%, 57%);
+
+	/* Colors - White */
+	--color-white: hsl(0, 0%, 100%);
+
+	/* Typography - Font Family */
+	--font-family: "Inter", sans-serif;
+
+	/* Typography - Font Sizes */
+	--font-size-preset-1: 24px;
+	--font-size-preset-2: 14px;
+
+	/* Typography - Font Weights */
+	--font-weight-regular: 400;
+	--font-weight-bold: 700;
+
+	/* Typography - Line Heights */
+	--line-height-150: 150%;
+
+	/* Typography - Letter Spacing */
+	--letter-spacing-0: 0px;
+
+	/* Spacing */
+	--spacing-500: 40px;
+	--spacing-300: 24px;
+	--spacing-200: 16px;
+	--spacing-150: 12px;
+	--spacing-100: 8px;
+	--spacing-50: 4px;
+}
+
+/* =============================================
+   BASE STYLES (MOBILE FIRST - <600px)
+   ============================================= */
+body {
+	font-family: var(--font-family);
+	background-color: var(--color-grey-900);
+	color: var(--color-white);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-block: var(--spacing-300);
+	padding-inline: var(--spacing-200);
+}
+
+.main {
+	inline-size: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	background-color: var(--color-grey-800);
+	border-radius: 12px;
+	padding-block: var(--spacing-300);
+	padding-inline: var(--spacing-300);
+	max-inline-size: 327px;
+	inline-size: 100%;
+	text-align: center;
+}
+
+.card__header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-block-end: var(--spacing-300);
+}
+
+.card__avatar {
+	inline-size: 88px;
+	block-size: 88px;
+	border-radius: 50%;
+	margin-block-end: var(--spacing-300);
+}
+
+.card__name {
+	font-size: var(--font-size-preset-1);
+	font-weight: var(--font-weight-bold);
+	line-height: var(--line-height-150);
+	letter-spacing: var(--letter-spacing-0);
+	color: var(--color-white);
+	margin-block-end: var(--spacing-50);
+}
+
+.card__location {
+	font-size: var(--font-size-preset-2);
+	font-weight: var(--font-weight-bold);
+	line-height: var(--line-height-150);
+	letter-spacing: var(--letter-spacing-0);
+	color: var(--color-green);
+}
+
+.card__bio {
+	font-size: var(--font-size-preset-2);
+	font-weight: var(--font-weight-regular);
+	line-height: var(--line-height-150);
+	letter-spacing: var(--letter-spacing-0);
+	color: var(--color-white);
+	margin-block-end: var(--spacing-300);
+}
+
+.card__social {
+	inline-size: 100%;
+}
+
+.card__social-list {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-200);
+}
+
+.card__social-item {
+	inline-size: 100%;
+}
+
+.card__social-link {
+	display: block;
+	inline-size: 100%;
+	background-color: var(--color-grey-700);
+	color: var(--color-white);
+	font-size: var(--font-size-preset-2);
+	font-weight: var(--font-weight-bold);
+	line-height: var(--line-height-150);
+	letter-spacing: var(--letter-spacing-0);
+	padding-block: var(--spacing-150);
+	padding-inline: var(--spacing-300);
+	border-radius: 8px;
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
+}
+
+.card__social-link:hover,
+.card__social-link:focus {
+	background-color: var(--color-green);
+	color: var(--color-grey-700);
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	margin-block-start: var(--spacing-300);
+	color: var(--color-white);
+}
+
+.attribution__link {
+	color: var(--color-green);
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.attribution__link:hover,
+.attribution__link:focus {
+	color: var(--color-white);
+}
+
+/* =============================================
+   TABLET (600px - 1024px)
+   ============================================= */
+@media (min-width: 600px) {
+	.card {
+		max-inline-size: 384px;
+		padding-block: var(--spacing-500);
+		padding-inline: var(--spacing-500);
+	}
+
+	.card__avatar {
+		inline-size: 96px;
+		block-size: 96px;
+	}
+
+	.attribution {
+		font-size: var(--font-size-preset-2);
+	}
+}
+
+/* =============================================
+   DESKTOP (≥1024px)
+   ============================================= */
+
+@media (min-width: 1024px) {
+	.card {
+		max-inline-size: 456px;
+	}
+
+	.card__avatar {
+		inline-size: 104px;
+		block-size: 104px;
+	}
+
+	.attribution {
+		font-size: var(--font-size-preset-2);
+	}
+}
