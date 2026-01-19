@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/galvaradosd/FM-Social-Links-Profile)
-- Live Site URL: [Add live site URL here](https://galvaradosd.github.io/FM-Social-Links-Profile/)
+- Solution URL: [Frontend Mentor's "Social Links Profile" challenge solution](https://www.frontendmentor.io/solutions/social-links-profile---html-css-flexbox-and-bem-methodology-DjwFlO5z1R)
+- Live Site URL: [FM Social Links Profile live site](https://galvaradosd.github.io/FM-Social-Links-Profile/)
 
 ## My process
 
